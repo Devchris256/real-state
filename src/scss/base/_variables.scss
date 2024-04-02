@@ -1,0 +1,68 @@
+// Fuente personalizada - statica: roboto
+@font-face {
+    font-family: "Roboto";
+    src:
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+      url('../fonts/Roboto-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src:
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+      url('../fonts/Roboto-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+//fuente personalizada - estica: open sans
+
+@font-face {
+    font-family: "Open Sans";
+    src:
+      url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+      url("../fonts/OpenSans-Bold.woff") format("woff"),
+      url("../fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src:
+      url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+      url("../fonts/OpenSans-Regular.woff") format("woff"),
+      url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+  
+  @supports (font-variation-settings: normal) {
+    @font-face {
+      font-family: "Open Sans";
+      src:
+        url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format(woff2) tech(variations),  /* Sintaxis moderna */
+        url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations");
+      font-weight: 100 900;
+    }
+}
+
+
+// Fuentes
+$fontPrimary: 'Open Sans', sans-serif;
+$fontSecundary: 'Roboto', cursive;
+
+// Tamaño de Media Queries
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktopxl: 1200px;
+
+// Colores
+$primary: #3b4862;
+$black: #000;
+$white: #FFFFFF;
+$grey: #eeefed;
+$greyLight: #f8f8f8;
