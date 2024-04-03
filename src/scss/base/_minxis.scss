@@ -50,3 +50,9 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin format($img) {
+    @supports(background-image: $img) {
+        background-image: linear-gradient( to right, transparentize(v.$primary, .1 ) 0%, transparentize(v.$primary, .1 ) 100% ), $img;
+    }
+}

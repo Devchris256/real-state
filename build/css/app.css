@@ -36,6 +36,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   background-color: #f0f0f0;
+  margin: 0;
 }
 
 .wrapper {
@@ -87,5 +88,111 @@ p {
   color: #000;
   font-size: 1rem;
   line-height: 1.8;
+}
+
+.header {
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+  position: relative;
+}
+@supports (background-image: url(../img/header_bg.jpg)) {
+  .header {
+    background-image: linear-gradient(to right, rgba(59, 72, 98, 0.9) 0%, rgba(59, 72, 98, 0.9) 100%), url(../img/header_bg.jpg);
+  }
+}
+@supports (background-image: url(../img/header_bg.webp)) {
+  .header {
+    background-image: linear-gradient(to right, rgba(59, 72, 98, 0.9) 0%, rgba(59, 72, 98, 0.9) 100%), url(../img/header_bg.webp);
+  }
+}
+@supports (background-image: url(../img/header_bg.avif)) {
+  .header {
+    background-image: linear-gradient(to right, rgba(59, 72, 98, 0.9) 0%, rgba(59, 72, 98, 0.9) 100%), url(../img/header_bg.avif);
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 1.875rem 0 12.5rem 0;
+  }
+}
+.header__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__logo {
+  inline-size: 15.625rem;
+}
+.header__title {
+  color: #FFFFFF;
+  text-align: center;
+}
+.header__text {
+  color: #FFFFFF;
+  display: none;
+}
+.header__img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header__content {
+    margin-top: 10rem;
+    max-width: 50rem;
+  }
+  .header__title {
+    text-align: left;
+  }
+  .header__text {
+    display: block;
+  }
+  .header__img {
+    display: block;
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: -3.125rem;
+    max-inline-size: 21.875rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 3.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header__img {
+    max-inline-size: 37.5rem;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-margin-before: 3.125rem;
+          margin-block-start: 3.125rem;
+}
+.navigation__link {
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  -webkit-margin-after: 1.25rem;
+          margin-block-end: 1.25rem;
+}
+.navigation__link:last-of-type {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+@media (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    gap: 1.25rem;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+  }
+  .navigation__link {
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+  }
 }
 /*# sourceMappingURL=app.css.map */

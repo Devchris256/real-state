@@ -1,0 +1,105 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.header {
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    position: relative;
+
+    @include m.format(url(../img/header_bg.jpg));
+    @include m.format(url(../img/header_bg.webp));
+    @include m.format(url(../img/header_bg.avif));
+
+    @include m.tablet { 
+        padding: 1.875rem 0 12.5rem 0;
+    }
+
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        inline-size: 15.625rem;
+    }
+
+    &__title {
+        color: v.$white;
+        text-align: center;
+    }
+
+    &__text {
+        color: v.$white;
+        display: none;
+    }
+    &__img {
+        display: none;
+
+    }
+
+    @include m.tablet { 
+        &__bar {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__content {
+            margin-top: 10rem;
+            max-width: 50rem;
+        }
+
+        &__title {
+            text-align: left;
+        }
+
+        &__text {
+            display: block;
+        }
+        
+        &__img{
+            display: block;
+            position: absolute;
+            inset-inline-end: 0;
+            inset-block-end: -3.125rem;
+            max-inline-size: 21.875rem;
+
+            border-top-left-radius: 1.25rem;
+            border-bottom-left-radius: 3.125rem;
+        }
+    }
+
+    @include m.desktopXL {
+        &__img {
+            max-inline-size: 37.5rem;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 3.125rem;
+
+    &__link {
+        color: v.$white;
+        font-size: 1.125rem;
+        margin-block-end: 1.25rem;
+
+        &:last-of-type {
+            margin-block-end: 0;
+        }
+    }
+    @include m.tablet { 
+        flex-direction: row;
+        gap: 1.25rem;
+        margin-block-start: 0;
+
+        &__link {
+            margin-block-end: 0;
+        }
+    }
+
+}
