@@ -1,0 +1,55 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+
+.featured {
+    margin-block-start: 3.125rem;
+    @include m.format(linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.jpg));
+    // background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.jpg);
+    background-size: 100%, cover ;
+    background-position: center, -31.25rem -18.75rem;
+    background-repeat: no-repeat;
+    
+    @include m.tablet { 
+        @include m.format(linear-gradient(to right, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.jpg));
+        background-position: center, -31.25rem center;
+
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+        @include m.tablet { 
+            grid-template-rows: unset;
+            @include m.grid(2, 2rem);
+
+        }
+    }
+    &__details {
+        padding: 3.125rem;
+        grid-row: 2 / 3;
+
+        @include m.tablet { 
+            padding: 6.25 3.125rem;
+            grid-column: 2 / 3;
+        }
+    }
+    &__title {
+        color: v.$white;
+        text-transform: uppercase;
+    }
+    &__text {
+        color: v.$white;
+        font-size: 1.125rem;
+    }
+    &__price {
+        color: v.$white;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &__link {
+        @include m.button(v.$white, v.$primary);
+        display: block;
+    }
+}
