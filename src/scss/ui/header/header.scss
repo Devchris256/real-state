@@ -7,9 +7,9 @@
     padding: 3rem 0;
     position: relative;
 
-    @include m.format(url(../img/header_bg.jpg));
-    @include m.format(url(../img/header_bg.webp));
-    @include m.format(url(../img/header_bg.avif));
+    @include m.format(linear-gradient( to right, transparentize(v.$primary, .1 ) 0%, transparentize(v.$primary, .1 ) 100% ), url(../img/header_bg.jpg));
+    @include m.format(linear-gradient( to right, transparentize(v.$primary, .1 ) 0%, transparentize(v.$primary, .1 ) 100% ), url(../img/header_bg.webp));
+    @include m.format(linear-gradient( to right, transparentize(v.$primary, .1 ) 0%, transparentize(v.$primary, .1 ) 100% ), url(../img/header_bg.avif));
 
     @include m.tablet { 
         padding: 1.875rem 0 12.5rem 0;
@@ -43,11 +43,12 @@
         &__bar {
             flex-direction: row;
             justify-content: space-between;
+            gap: 1.5rem;
         }
 
         &__content {
-            margin-top: 10rem;
-            max-width: 50rem;
+            margin-block-start: 6.25rem;
+            max-inline-size: 31.25rem;
         }
 
         &__title {

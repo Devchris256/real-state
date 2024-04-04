@@ -51,8 +51,46 @@
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin format($img) {
+@mixin format($gradient, $img) {
     @supports(background-image: $img) {
-        background-image: linear-gradient( to right, transparentize(v.$primary, .1 ) 0%, transparentize(v.$primary, .1 ) 100% ), $img;
+        background-image: $gradient, $img;
+    }
+}
+
+
+// @mixin heading($salto: false) {
+//     font-weight: 400;
+
+//     span {
+//         font-weight: 700;
+//         @if($salto) {
+//             display: block;
+//         }
+        
+//     }
+
+//     &::after {
+//         content: '';
+//         display: block;
+//         height: 1rem;
+//         width: 15rem;
+//         margin-top: 1rem;
+//         background-image: linear-gradient( to right, v.$primario 0%, v.$primario 50%, lighten(v.$primario, 20%) 50%, lighten(v.$primario, 20%) 100% );
+//     }
+// }
+@mixin title {
+    font-weight: 400;
+
+    span {
+        font-weight: 700;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1rem;
+        width: 15rem;
+        margin-top: 1rem;
+        background-image: linear-gradient( to right, v.$primary 0%, v.$primary 50%, lighten(v.$primary, 20%) 50%, lighten(v.$primary, 20%) 100% );
     }
 }

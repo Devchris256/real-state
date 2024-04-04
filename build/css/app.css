@@ -139,10 +139,12 @@ p {
   .header__bar {
     flex-direction: row;
     justify-content: space-between;
+    gap: 1.5rem;
   }
   .header__content {
-    margin-top: 10rem;
-    max-width: 50rem;
+    -webkit-margin-before: 6.25rem;
+            margin-block-start: 6.25rem;
+    max-inline-size: 31.25rem;
   }
   .header__title {
     text-align: left;
@@ -194,5 +196,184 @@ p {
     -webkit-margin-after: 0;
             margin-block-end: 0;
   }
+}
+
+.properties {
+  -webkit-margin-before: 3.125rem;
+          margin-block-start: 3.125rem;
+}
+@media (min-width: 768px) {
+  .properties {
+    -webkit-margin-before: 6.25rem;
+            margin-block-start: 6.25rem;
+  }
+}
+.properties__title {
+  font-weight: 400;
+}
+.properties__title span {
+  font-weight: 700;
+}
+.properties__title::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 15rem;
+  margin-top: 1rem;
+  background-image: linear-gradient(to right, #3b4862 0%, #3b4862 50%, #6277a1 50%, #6277a1 100%);
+}
+.properties__content {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .properties__content {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.property {
+  background-color: #FFFFFF;
+}
+.property__img {
+  aspect-ratio: 10/6;
+  background-size: auto 150%;
+  position: relative;
+}
+@supports (background-image: url("../img/propiedad_1.jpg")) {
+  .property:nth-child(1) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_1.jpg");
+  }
+}
+@supports (background-image: url("../img/propiedad_1.webp")) {
+  .property:nth-child(1) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_1.webp");
+  }
+}
+@supports (background-image: url("../img/propiedad_1.avif")) {
+  .property:nth-child(1) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_1.avif");
+  }
+}
+@supports (background-image: url("../img/propiedad_2.jpg")) {
+  .property:nth-child(2) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_2.jpg");
+  }
+}
+@supports (background-image: url("../img/propiedad_2.webp")) {
+  .property:nth-child(2) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_2.webp");
+  }
+}
+@supports (background-image: url("../img/propiedad_2.avif")) {
+  .property:nth-child(2) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_2.avif");
+  }
+}
+@supports (background-image: url("../img/propiedad_3.jpg")) {
+  .property:nth-child(3) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_3.jpg");
+  }
+}
+@supports (background-image: url("../img/propiedad_3.webp")) {
+  .property:nth-child(3) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_3.webp");
+  }
+}
+@supports (background-image: url("../img/propiedad_3.avif")) {
+  .property:nth-child(3) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_3.avif");
+  }
+}
+@supports (background-image: url("../img/propiedad_4.jpg")) {
+  .property:nth-child(4) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_4.jpg");
+  }
+}
+@supports (background-image: url("../img/propiedad_4.webp")) {
+  .property:nth-child(4) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_4.webp");
+  }
+}
+@supports (background-image: url("../img/propiedad_4.avif")) {
+  .property:nth-child(4) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_4.avif");
+  }
+}
+@supports (background-image: url("../img/propiedad_5.jpg")) {
+  .property:nth-child(5) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_5.jpg");
+  }
+}
+@supports (background-image: url("../img/propiedad_5.webp")) {
+  .property:nth-child(5) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_5.webp");
+  }
+}
+@supports (background-image: url("../img/propiedad_5.avif")) {
+  .property:nth-child(5) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_5.avif");
+  }
+}
+@supports (background-image: url("../img/propiedad_6.jpg")) {
+  .property:nth-child(6) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_6.jpg");
+  }
+}
+@supports (background-image: url("../img/propiedad_6.webp")) {
+  .property:nth-child(6) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_6.webp");
+  }
+}
+@supports (background-image: url("../img/propiedad_6.avif")) {
+  .property:nth-child(6) .property__img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/propiedad_6.avif");
+  }
+}
+.property__name {
+  position: absolute;
+  inset-inline-start: 0.625rem;
+  inset-block-end: 0.625rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+.property__detail {
+  padding: 1.25rem;
+}
+.property__text {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+.property__price {
+  font-size: 1.875rem;
+  margin: 0;
+}
+.property__link {
+  background-color: #3b4862;
+  padding: 1rem 2.5rem;
+  color: #FFFFFF;
+  -webkit-margin-before: 1.25rem;
+          margin-block-start: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .property__link {
+    inline-size: auto;
+  }
+}
+.property__link:hover {
+  background-color: #283142;
 }
 /*# sourceMappingURL=app.css.map */
