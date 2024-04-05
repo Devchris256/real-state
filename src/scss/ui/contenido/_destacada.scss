@@ -5,13 +5,16 @@
 .featured {
     margin-block-start: 3.125rem;
     @include m.format(linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.jpg));
-    // background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.jpg);
+    @include m.format(linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.webp));
+    @include m.format(linear-gradient(to bottom, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.avif));
     background-size: 100%, cover ;
     background-position: center, -31.25rem -18.75rem;
     background-repeat: no-repeat;
     
     @include m.tablet { 
         @include m.format(linear-gradient(to right, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.jpg));
+        @include m.format(linear-gradient(to right, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.webp));
+        @include m.format(linear-gradient(to right, transparent 0%, transparent 50%, v.$primary 50%, v.$primary 100%), url(../img/destacada.avif));
         background-position: center, -31.25rem center;
 
     }

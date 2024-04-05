@@ -389,6 +389,16 @@ p {
     background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #3b4862 50%, #3b4862 100%), url(../img/destacada.jpg);
   }
 }
+@supports (background-image: url(../img/destacada.webp)) {
+  .featured {
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #3b4862 50%, #3b4862 100%), url(../img/destacada.webp);
+  }
+}
+@supports (background-image: url(../img/destacada.avif)) {
+  .featured {
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #3b4862 50%, #3b4862 100%), url(../img/destacada.avif);
+  }
+}
 @media (min-width: 768px) {
   .featured {
     background-position: center, -31.25rem center;
@@ -396,6 +406,16 @@ p {
   @supports (background-image: url(../img/destacada.jpg)) {
     .featured {
       background-image: linear-gradient(to right, transparent 0%, transparent 50%, #3b4862 50%, #3b4862 100%), url(../img/destacada.jpg);
+    }
+  }
+  @supports (background-image: url(../img/destacada.webp)) {
+    .featured {
+      background-image: linear-gradient(to right, transparent 0%, transparent 50%, #3b4862 50%, #3b4862 100%), url(../img/destacada.webp);
+    }
+  }
+  @supports (background-image: url(../img/destacada.avif)) {
+    .featured {
+      background-image: linear-gradient(to right, transparent 0%, transparent 50%, #3b4862 50%, #3b4862 100%), url(../img/destacada.avif);
     }
   }
 }
@@ -457,5 +477,132 @@ p {
 }
 .featured__link:hover {
   background-color: #e6e6e6;
+}
+
+.testomonials-blog {
+  -webkit-margin-before: 3.125rem;
+          margin-block-start: 3.125rem;
+}
+.testomonials-blog__title {
+  font-weight: 400;
+}
+.testomonials-blog__title span {
+  font-weight: 700;
+  display: block;
+}
+.testomonials-blog__title::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 15rem;
+  margin-top: 1rem;
+  background-image: linear-gradient(to right, #3b4862 0%, #3b4862 50%, #6277a1 50%, #6277a1 100%);
+}
+@media (min-width: 1024px) {
+  .testomonials-blog__content {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testomonials-blog__testimonials {
+    grid-column: 1/2;
+  }
+  .testomonials-blog__blog {
+    grid-column: 2/4;
+  }
+}
+
+.testimony {
+  text-align: center;
+}
+.testimony__img {
+  inline-size: 12.5rem;
+  margin: 0 auto;
+}
+.testimony__content {
+  background-color: #FFFFFF;
+  -webkit-margin-before: -6.25rem;
+          margin-block-start: -6.25rem;
+  padding: 6.25rem 1.25rem 1.25rem 1.25rem;
+}
+.testimony__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.testimony__text::before {
+  content: "";
+  background-image: url(../img/quote.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  -webkit-margin-end: 0.625rem;
+          margin-inline-end: 0.625rem;
+}
+
+.blog {
+  background-color: #FFFFFF;
+  -webkit-margin-after: 1.25rem;
+          margin-block-end: 1.25rem;
+}
+@media (min-width: 768px) {
+  .blog {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .blog__picture {
+    grid-column: 1/3;
+  }
+}
+.blog__img {
+  block-size: 18.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  inline-size: 100%;
+}
+.blog__content {
+  padding: 0.625rem;
+}
+@media (min-width: 768px) {
+  .blog__content {
+    grid-column: 3/6;
+  }
+}
+.blog__meta {
+  font-size: 0.875rem;
+}
+.blog__link {
+  background-color: #3b4862;
+  padding: 1rem 2.5rem;
+  color: #FFFFFF;
+  -webkit-margin-before: 1.25rem;
+          margin-block-start: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+}
+@media (min-width: 768px) {
+  .blog__link {
+    inline-size: auto;
+  }
+}
+.blog__link:hover {
+  background-color: #283142;
+}
+@media (min-width: 768px) {
+  .blog__link {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=app.css.map */
